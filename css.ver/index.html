@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>앱 이름</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .login-btn {
+      padding: 5px 10px;
+    
+    }
+.login-btn:hover {
+      background: #ffffff;
+  }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .left-panel, .right-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .left-panel {
+      margin-right: 100px;
+    }
+
+    .right-panel {
+      margin-left: 100px;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .left-panel button, .right-panel button {
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #aaa;
+      width: 200px;
+      background-color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+     /*버튼 색상 변경*/
+    .right-panel button:last-child:hover {
+      background: #ffc782;
+    }
+    .left-panel button:hover {
+      background: #ffc782;
+  }
+  
+  /* Step 1,2,3 버튼만 hover 효과 제거 */
+  .left-panel button:nth-child(-n+3):hover {
+    background: white;
+  }
+    
+    
+
+    .left-panel button .step {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .camera {
+      width: 240px;
+      height: 340px;
+      background: black;
+    }
+
+    .center-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 65px;
+      gap: 10px;
+    }
+
+    .capture-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #333;
+      color: white;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* emoji panel 스타일 */
+    .emoji-panel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 10px;
+      margin: 1px 0;
+      background: #fff;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      width: 200px;
+      justify-items: center;
+    }
+    .emoji-panel button {
+      width: 40px;
+      height: 45px;
+      font-size: 18px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #fafafa;
+      cursor: pointer;
+      transition: background 0.2s;
+      padding: 0;
+    }
+    .emoji-panel button:hover {
+      background: #ffe082;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 10px 20px;
+      border-top: 1px solid #ccc;
+      font-size: 14px;
+      background: #fff;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    footer .right {
+      text-align: right;
+    }
+  </style>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><h1>Index</h1></header>
+<div class="container">
+<header>
+    <div><strong>앱 이름</strong></div>
+    <button class="login-btn" onclick="location.href='/login'">login</button>
+  </header>
+
+  <main>
+    <div class="left-panel">
+      <button>
+        <span class="step">Step 1</span>
+        로그인 후 화면에<br> 얼굴을 인식</br>
+      </button>
+      <button>
+        <span class="step">Step 2</span>
+        이모지 선택
+      </button>
+      <button>
+        <span class="step">Step 3</span>
+        촬영
+      </button>
+      <button onclick="location.href='gallery.html'">Gallery</button>
+    </div>
+
+    <div class="center-panel">
+      <div class="camera"></div>
+      <button class="capture-btn">★</button>
+    </div>
+
+    <div class="right-panel">
+      <button style="margin-top: 59px;">emoji</button>
+      <!-- 4열 5행 이모지 패널 추가 -->
+      <div class="emoji-panel">
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/1.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/2.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/3.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/4.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/5.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/6.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/7.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/8.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/9.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/10.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/11.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/12.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/13.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/14.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/15.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/16.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/17.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/18.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/19.png"style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/20.png"style="width: 30px; height: 30px;"></button>
+      </div>
+      <button>delete</button>
+    </div>
+  </main>
+
+  <footer>
+    <div>Baekseok University</div>
+    <div class="right">
+      made 곽재원<br>
+      경채현
+    </div>
+  </footer>
+</div>
+<footer><p>&copy; 2025 My Web</p></footer>
+</body>
+</html>
