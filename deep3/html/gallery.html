@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>앱 이름</title>
+ <link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body>
+  <div th:replace="fragments/header :: commonHeader"></div>
+
+  <main>
+    <div class="center-panel">
+      <button>photo</button>
+      <div class="camera"></div>
+    </div>
+  </main>
+
+  <div th:replace="fragments/footer :: commonFooter"></div>
+</body>
+</html>
