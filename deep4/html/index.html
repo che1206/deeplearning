@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>앱 이름</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <div th:replace="fragments/header :: commonHeader"></div>
+
+  <main>
+    <div class="left-panel">
+      <button>
+        <span class="step">Step 1</span>
+        로그인 후 화면에<br> 얼굴을 인식</br>
+      </button>
+      <button>
+        <span class="step">Step 2</span>
+        이모지 선택
+      </button>
+      <button>
+        <span class="step">Step 3</span>
+        촬영
+      </button>
+      <button onclick="location.href='gallery.html'">Gallery</button>
+    </div>
+
+    <div class="center-panel">
+      <div class="camera"></div>
+      <button class="capture-btn">★</button>
+    </div>
+
+    <div class="right-panel">
+      <button style="margin-top: 59px;">emoji</button>
+      <div class="emoji-panel">
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/1.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/2.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/3.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/4.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/5.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/6.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/7.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/8.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/9.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/10.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/11.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/12.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/13.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/14.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/15.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/16.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/17.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/18.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/19.png" style="width: 30px; height: 30px;"></button>
+        <button><img src="https://raw.githubusercontent.com/che1206/deeplearning/2b275373bb7dbcf1ea9be9a8f7e8771011f9a857/deep/emo/20.png" style="width: 30px; height: 30px;"></button>
+      </div>
+      <button>delete</button>
+    </div>
+  </main>
+
+  <div th:replace="fragments/footer :: commonFooter"></div>
+</body>
+</html>
